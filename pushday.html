@@ -1,132 +1,310 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
-    <title>Push Day | Get Jacked</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Push Day - Get Jacked</title>
 
-        h1 {
-            color: #ff4500; /* Opvallende gym-oranje kleur */
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-        .container {
-            max-width: 700px;
-            margin: auto;
-            background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
-        }
+<style>
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+  /* ===== Algemene stijl, zelfde basis als index.html ===== */
+  body 
+    {
+        margin: 0;
+        background-color: #ffffff;
+        color: #000000;
+        font-family: 'Inter', sans-serif;
+        line-height: 1.5;
+    }
 
-        th, td {
-            border: 1px solid #333;
-            padding: 12px;
-            text-align: left;
-        }
+  .inhoud 
+    {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 
-        th {
-            background-color: #ff4500;
-            color: white;
-        }
+  /* ===== Bovenbalk ===== */
+  .header 
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 26px 20px;
+    }
 
-        tr:nth-child(even) {
-            background-color: #2a2a2a;
-        }
+  .logo 
+    {
+        font-family: 'Anton', sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        color: #000000;
+    }
 
-        .tip-box {
-            background-color: #2b2b36;
-            border-left: 5px solid #ff4500;
-            padding: 15px;
-            margin-top: 25px;
-            text-align: left;
-            border-radius: 5px;
-        }
+  .header a.terug {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
 
-        .back-btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 10px 20px;
-            background-color: #ff4500;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
+  /* ===== Titelblok van de pagina ===== */
+  .pagina-titel {
+    padding: 30px 20px 50px;
+  }
 
-        .back-btn:hover {
-            background-color: #e03d00;
-        }
-    </style>
+  .pagina-titel .label {
+    color: #6e6e6e;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .pagina-titel h1 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(40px, 8vw, 70px);
+    margin: 8px 0 0 0;
+  }
+
+  /* ===== Een oefening: foto + uitleg naast elkaar ===== */
+  .oefeningen {
+    padding-bottom: 60px;
+  }
+
+  .oefening {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 26px 0;
+    border-top: 2px solid #000000;
+  }
+
+  .oefening:last-child {
+    border-bottom: 2px solid #000000;
+  }
+
+  .oefening-foto {
+    width: 260px;
+    height: 180px;
+    flex-shrink: 0;
+    background-color: #f0f0f0;   /* grijs vlak zolang er nog geen foto is ingevuld */
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .oefening-info {
+    flex: 1;
+    min-width: 220px;
+  }
+
+  .oefening-nummer {
+    color: #6e6e6e;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .oefening-naam {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 6px 0 10px 0;
+  }
+
+  .oefening-uitleg {
+    color: #333333;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .focuspunten {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 14px;
+    color: #444444;
+  }
+
+  .focuspunten li {
+    margin-bottom: 4px;
+  }
+
+  /* ===== Onderaan ===== */
+  .footer {
+    padding: 24px 20px;
+    font-size: 13px;
+    color: #6e6e6e;
+    text-align: center;
+  }
+
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>🔥 Push Day Routine</h1>
-        <p><i>Borst, Schouders & Triceps focus. Push tot failure!</i></p>
+  <!-- Bovenbalk, met link terug naar de homepagina -->
+  <div class="header">
+    <a class="logo" href="index.html">GET JACKED</a>
+    <a class="terug" href="index.html">← Terug</a>
+  </div>
 
-        <!-- Oefeningen Tabel -->
-        <table>
-            <tr>
-                <th>Oefening</th>
-                <th>Sets</th>
-                <th>Reps</th>
-                <th>Rust</th>
-            </tr>
-            <tr>
-                <td>Incline Dumbbell Press</td>
-                <td>3</td>
-                <td>8 - 10</td>
-                <td>2 min</td>
-            </tr>
-            <tr>
-                <td>Barbell Bench Press</td>
-                <td>4</td>
-                <td>6 - 8</td>
-                <td>3 min</td>
-            </tr>
-            <tr>
-                <td>Overhead Shoulder Press</td>
-                <td>3</td>
-                <td>8 - 12</td>
-                <td>2 min</td>
-            </tr>
-            <tr>
-                <td>Cable Lateral Raises</td>
-                <td>4</td>
-                <td>12 - 15</td>
-                <td>1.5 min</td>
-            </tr>
-            <tr>
-                <td>Tricep Rope Pushdowns</td>
-                <td>3</td>
-                <td>10 - 12</td>
-                <td>1 min</td>
-            </tr>
-        </table>
-
-        <!-- Ruben's Pro Tips -->
-        <div class="tip-box">
-            <h3>💡 Ruben's Pro Tip voor Push Day:</h3>
-            <p>Focus bij het bankdrukken op een gecontroleerde excentrische fase (het laten zakken van het gewicht). Laat de stang 2-3 seconden zakken voor maximale spierprikkeling!</p>
-        </div>
-
-        <!-- Terugknop naar hoofdpagina -->
-        <br>
-        <a href="index.html" class="back-btn">⬅ Terug naar Home</a>
+  <!-- Titel van de pagina -->
+  <div class="inhoud">
+    <div class="pagina-titel">
+      <div class="label">DAG 1</div>
+      <h1>Push Day</h1>
     </div>
+  </div>
+
+  <!-- Lijst van oefeningen -->
+  <div class="inhoud">
+    <div class="oefeningen">
+
+      <!-- Oefening 1 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="incline-dumbbell-press.jpg" alt="Incline dumbbell press">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 1</div>
+          <div class="oefening-naam">Incline Dumbbell Press</div>
+          <p class="oefening-uitleg">Bankdrukken op een schuine bank met dumbbells, gericht op de bovenste borstspier.</p>
+          <ul class="focuspunten">
+            <li>Bank op een lichte hoek, 30 tot 45 graden</li>
+            <li>Ellebogen niet volledig doorstrekken bovenaan</li>
+            <li>Gecontroleerd naar beneden, geen stuiteren op de borst</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 2 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="flat-press.jpg" alt="Flat press">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 2</div>
+          <div class="oefening-naam">Flat Press</div>
+          <p class="oefening-uitleg">Bankdrukken op een vlakke bank, de basisoefening voor de volledige borstspier.</p>
+          <ul class="focuspunten">
+            <li>Schouderbladen samen en naar beneden</li>
+            <li>Voeten stevig op de grond</li>
+            <li>Stang of dumbbells zakken tot net boven de borst</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 3 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="pec-fly.jpg" alt="Pec fly">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 3</div>
+          <div class="oefening-naam">Pec Fly</div>
+          <p class="oefening-uitleg">Isolatieoefening voor de borst, op de machine of met kabels.</p>
+          <ul class="focuspunten">
+            <li>Lichte buiging in de ellebogen, gedurende de hele beweging</li>
+            <li>Beweging komt uit de borst, niet uit de schouders</li>
+            <li>Even knijpen in de eindpositie</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 4 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="single-arm-tricep-pushdown.jpg" alt="Single arm tricep pushdown">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 4</div>
+          <div class="oefening-naam">Single Arm Tricep Pushdown</div>
+          <p class="oefening-uitleg">Tricepsoefening aan de kabel, één arm per keer.</p>
+          <ul class="focuspunten">
+            <li>Elleboog blijft tegen het lichaam, beweegt niet mee</li>
+            <li>Volledig doorstrekken onderaan</li>
+            <li>Rustig terug laten komen, niet laten terugveren</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 5 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="v-bar-pushdown.jpg" alt="V-bar pushdown">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 5</div>
+          <div class="oefening-naam">V-Bar Pushdown</div>
+          <p class="oefening-uitleg">Tricepsoefening aan de kabel met de V-vormige grip, beide armen samen.</p>
+          <ul class="focuspunten">
+            <li>Ellebogen dicht bij het lichaam</li>
+            <li>Lichte voorover buiging vanuit de heup, rug recht</li>
+            <li>Volledige strekking onderaan, kort vasthouden</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 6 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="skull-crusher.jpg" alt="Skull crusher">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 6</div>
+          <div class="oefening-naam">Skull Crusher</div>
+          <p class="oefening-uitleg">Tricepsoefening liggend op de bank, met stang of dumbbells.</p>
+          <ul class="focuspunten">
+            <li>Ellebogen wijzen naar het plafond en blijven stil</li>
+            <li>Stang zakt richting voorhoofd, niet richting keel</li>
+            <li>Gecontroleerde beweging, zowel op als neer</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 7 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="shoulder-press.jpg" alt="Shoulder press">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 7</div>
+          <div class="oefening-naam">Shoulder Press</div>
+          <p class="oefening-uitleg">Drukoefening voor de schouders, zittend of staand, met stang of dumbbells.</p>
+          <ul class="focuspunten">
+            <li>Core aangespannen, geen overdreven holle rug</li>
+            <li>Stang of dumbbells recht boven de schouders drukken</li>
+            <li>Niet volledig op slot drukken bovenaan</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 8 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="rear-delt-fly.jpg" alt="Rear delt fly">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 8</div>
+          <div class="oefening-naam">Rear Delt Fly</div>
+          <p class="oefening-uitleg">Isolatieoefening voor de achterste schouderspier, met dumbbells of op de machine.</p>
+          <ul class="focuspunten">
+            <li>Lichte buiging in de ellebogen</li>
+            <li>Beweging komt uit de achterste schouder, niet uit de rug</li>
+            <li>Geen zwaai, rustig tempo</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 9 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="cable-shoulder-side-raise.jpg" alt="Cable shoulder side raises">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 9</div>
+          <div class="oefening-naam">Cable Shoulder Side Raises</div>
+          <p class="oefening-uitleg">Zijwaartse schouderheffing aan de kabel, voor de zijdelingse schouderspier.</p>
+          <ul class="focuspunten">
+            <li>Lichte buiging in de elleboog, tijdens de hele set</li>
+            <li>Til tot ongeveer schouderhoogte, niet hoger</li>
+            <li>Traag naar beneden, geen momentum gebruiken</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Onderbalk -->
+  <div class="footer">
+    Get Jacked
+  </div>
 
 </body>
 </html>
