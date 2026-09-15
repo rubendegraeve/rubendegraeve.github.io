@@ -1,1 +1,291 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pull Day - Get Jacked</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+  /* ===== Algemene stijl, zelfde basis als de andere pagina's ===== */
+  body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+  }
+
+  .inhoud {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ===== Bovenbalk ===== */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 20px;
+  }
+
+  .logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .header a.terug {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* ===== Titelblok van de pagina ===== */
+  .pagina-titel {
+    padding: 30px 20px 50px;
+  }
+
+  .pagina-titel .label {
+    color: #6e6e6e;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .pagina-titel h1 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(40px, 8vw, 70px);
+    margin: 8px 0 0 0;
+  }
+
+  /* ===== Een oefening: foto + uitleg naast elkaar ===== */
+  .oefeningen {
+    padding-bottom: 60px;
+  }
+
+  .oefening {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 26px 0;
+    border-top: 2px solid #000000;
+  }
+
+  .oefening:last-child {
+    border-bottom: 2px solid #000000;
+  }
+
+  .oefening-foto {
+    width: 260px;
+    height: 180px;
+    flex-shrink: 0;
+    background-color: #f0f0f0;   /* grijs vlak zolang er nog geen foto is ingevuld */
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .oefening-info {
+    flex: 1;
+    min-width: 220px;
+  }
+
+  .oefening-nummer {
+    color: #6e6e6e;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .oefening-naam {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 6px 0 10px 0;
+  }
+
+  .oefening-uitleg {
+    color: #333333;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .focuspunten {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 14px;
+    color: #444444;
+  }
+
+  .focuspunten li {
+    margin-bottom: 4px;
+  }
+
+  /* ===== Onderaan ===== */
+  .footer {
+    padding: 24px 20px;
+    font-size: 13px;
+    color: #6e6e6e;
+    text-align: center;
+  }
+
+</style>
+</head>
+
+<body>
+
+  <!-- Bovenbalk, met link terug naar de homepagina -->
+  <div class="header">
+    <a class="logo" href="index.html">GET JACKED</a>
+    <a class="terug" href="index.html">← Terug</a>
+  </div>
+
+  <!-- Titel van de pagina -->
+  <div class="inhoud">
+    <div class="pagina-titel">
+      <div class="label">DAG 2</div>
+      <h1>Pull Day</h1>
+    </div>
+  </div>
+
+  <!-- Lijst van oefeningen -->
+  <div class="inhoud">
+    <div class="oefeningen">
+
+      <!-- Oefening 1 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="lat-pulldown.jpg" alt="Lat pulldown">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 1</div>
+          <div class="oefening-naam">Lat Pulldown</div>
+          <p class="oefening-uitleg">Trekoefening aan de kabel, met normale grip, gericht op de brede rugspier.</p>
+          <ul class="focuspunten">
+            <li>Stang trekken richting bovenborst, niet richting nek</li>
+            <li>Schouders naar beneden houden, niet optrekken</li>
+            <li>Rustig laten terugkomen, arm volledig strekken bovenaan</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 2 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="wide-grip-lat-pulldown.jpg" alt="Wilde grip lat pulldown">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 2</div>
+          <div class="oefening-naam">Wilde Grip Lat Pulldown</div>
+          <p class="oefening-uitleg">Zelfde beweging als de gewone lat pulldown, maar met een brede grip voor meer nadruk op de breedte van de rug.</p>
+          <ul class="focuspunten">
+            <li>Handen breder dan schouderbreedte op de stang</li>
+            <li>Borst iets naar voren, lichte holle rug</li>
+            <li>Trek met de ellebogen, niet enkel met de handen</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 3 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="rows.jpg" alt="Rows">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 3</div>
+          <div class="oefening-naam">Rows</div>
+          <p class="oefening-uitleg">Roeibeweging, met stang, dumbbells of aan de kabel, voor de dikte van de rug.</p>
+          <ul class="focuspunten">
+            <li>Rug recht houden, niet ronden</li>
+            <li>Ellebogen dicht bij het lichaam trekken</li>
+            <li>Knijp de schouderbladen samen op het einde van de beweging</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 4 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="bayesian-curl.jpg" alt="Bayesian curls">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 4</div>
+          <div class="oefening-naam">Bayesian Curls</div>
+          <p class="oefening-uitleg">Bicepscurl aan de kabel, met de arm achter het lichaam, voor extra rek op de biceps.</p>
+          <ul class="focuspunten">
+            <li>Begin met de arm iets naar achteren gestrekt</li>
+            <li>Elleboog blijft op dezelfde plaats tijdens de beweging</li>
+            <li>Volledig doorstrekken onderaan, voor de rek</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 5 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="hammer-curl.jpg" alt="Hammer curls">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 5</div>
+          <div class="oefening-naam">Hammer Curls</div>
+          <p class="oefening-uitleg">Bicepscurl met dumbbells in een neutrale grip, handpalmen naar elkaar toe.</p>
+          <ul class="focuspunten">
+            <li>Ellebogen blijven tegen het lichaam</li>
+            <li>Geen zwaai met de romp om de dumbbells omhoog te krijgen</li>
+            <li>Gecontroleerd naar beneden</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 6 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="preacher-curl.jpg" alt="Preacher curls">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 6</div>
+          <div class="oefening-naam">Preacher Curls</div>
+          <p class="oefening-uitleg">Bicepscurl op de preacher bank, waarbij de bovenarm ondersteund wordt.</p>
+          <ul class="focuspunten">
+            <li>Bovenarm blijft plat tegen de bank</li>
+            <li>Niet volledig doorstrekken onderaan, om de elleboog te ontzien</li>
+            <li>Traag en gecontroleerd, geen momentum</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 7 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="wrist-curl.jpg" alt="Wrist curls">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 7</div>
+          <div class="oefening-naam">Wrist Curls</div>
+          <p class="oefening-uitleg">Onderarmoefening waarbij je enkel de pols buigt, met een stang of dumbbells, voor grip en onderarmen.</p>
+          <ul class="focuspunten">
+            <li>Onderarmen laten rusten op de knieën of een bank</li>
+            <li>Beweging komt enkel uit de pols</li>
+            <li>Kleine, trage herhalingen, volledig bereik</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Oefening 8 -->
+      <div class="oefening">
+        <img class="oefening-foto" src="reverse-curl.jpg" alt="Reverse curls">
+        <div class="oefening-info">
+          <div class="oefening-nummer">OEFENING 8</div>
+          <div class="oefening-naam">Reverse Curls</div>
+          <p class="oefening-uitleg">Curl met de handpalmen naar beneden gericht, voor de onderarmen en bovenkant van de biceps.</p>
+          <ul class="focuspunten">
+            <li>Grip stevig, duimen boven op de stang</li>
+            <li>Ellebogen blijven tegen het lichaam</li>
+            <li>Licht gewicht gebruiken, techniek boven zwaarte</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Onderbalk -->
+  <div class="footer">
+    Get Jacked
+  </div>
+
+</body>
+</html>
