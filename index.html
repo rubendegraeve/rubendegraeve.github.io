@@ -1,33 +1,219 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title style="text-align: center;">Get Jacked</title>
-    </head>
-  
-    <body>
-    
-      <h1 style="text-align: center;">Gym information</h1>
-      <h3 style="text-align: center;font-style: italic;">Lets get jacked</h3>
-      <p style="text-align: center;font-style: italic;">Mijn naam is Ruben De Graeve en deze website is voor de mensen die zichzelf willen verbeteren en hier help ik jullie erbij.</p>
-      
-      <p style="text-align: center;">
-          <img src="mezelf.jpg" alt="Mezelf" height="500">
-          <br>
-          <a href="https://www.gymshark.com/">Gym Shark</a>
-      </p>
-        
-      <br>
-      <br>
-      
-      <p style="text-align: center;"font-style: italic;">Hieronder kun je de keuze maken tussen mijn PPL split. Klik hieronder op wat je wil hitten.</p>
-      
-      <br>
-        
-      <p style="text-align: center;">
-          <button onclick="document.location='pushday.html'">Push Day</button>
-          <button onclick="document.location='pullday.html'">Pull Day</button>
-          <button onclick="document.location='legsabs.html'">Legs & Abs</button>
-      </p>
-      
-    </body>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Jacked</title>
+
+<!-- Anton: dik, hoofdletter lettertype voor de titels, net als Gymshark gebruikt -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+  /* ===== Algemene stijl ===== */
+  body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+  }
+
+  .inhoud {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ===== Bovenbalk ===== */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 20px;
+  }
+
+  .logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .header a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* ===== Hero: grote foto met tekst erover ===== */
+  .hero {
+    position: relative;
+    height: 80vh;
+    min-height: 480px;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.15)), url('mezelf.jpg');
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .hero-tekst {
+    padding: 50px 20px;
+    color: #ffffff;
+  }
+
+  .hero-tekst h1 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(40px, 8vw, 90px);
+    line-height: 0.95;
+    margin: 0;
+  }
+
+  .hero-tekst p {
+    max-width: 420px;
+    margin-top: 18px;
+    color: #e6e6e6;
+  }
+
+  .knop {
+    display: inline-block;
+    margin-top: 25px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 14px 30px;
+    border-radius: 50px;   /* ronde "pil" knop, zoals Gymshark gebruikt */
+  }
+
+  /* ===== De 3 trainingsdagen, op zwarte achtergrond ===== */
+  .dagen-sectie {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 60px 0 70px;
+  }
+
+  .dagen-titel h2 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 0 0 10px 0;
+  }
+
+  .dagen-titel p {
+    color: #b3b3b3;
+    margin: 0 0 30px 0;
+  }
+
+  .dagen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .dag-kaart {
+    flex: 1;
+    min-width: 220px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 26px 24px;
+    border-radius: 24px;   /* zachte, ronde hoeken zoals de knoppen */
+  }
+
+  .dag-kaart:hover {
+    background-color: #e6e6e6;
+  }
+
+  .dag-nummer {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #6e6e6e;
+  }
+
+  .dag-naam {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-top: 8px;
+  }
+
+  .dag-uitleg {
+    font-size: 14px;
+    color: #444444;
+    margin-top: 6px;
+  }
+
+  /* ===== Onderaan ===== */
+  .footer {
+    padding: 24px 20px;
+    font-size: 13px;
+    color: #6e6e6e;
+    text-align: center;
+  }
+
+</style>
+</head>
+
+<body>
+
+  <!-- Bovenbalk -->
+  <div class="header">
+    <div class="logo">GET JACKED</div>
+    <a href="https://www.gymshark.com/" target="_blank">GYMSHARK</a>
+  </div>
+
+  <!-- Grote foto met titel erover -->
+  <div class="hero">
+    <div class="inhoud">
+      <div class="hero-tekst">
+        <h1>Word elke<br>dag sterker</h1>
+        <p>Mijn naam is Ruben De Graeve. Deze website is voor mensen die zichzelf willen verbeteren, met een simpele Push, Pull, Legs opbouw waarmee ik zelf train.</p>
+        <br>
+        <a class="knop" href="https://www.gymshark.com/" target="_blank">Bekijk Gymshark</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- De 3 trainingsdagen -->
+  <div class="dagen-sectie">
+    <div class="inhoud">
+      <div class="dagen-titel">
+        <h2>Kies je training</h2>
+        <p>Drie dagen, telkens opnieuw. Klik op een dag om het schema te bekijken.</p>
+      </div>
+      <div class="dagen">
+        <a class="dag-kaart" href="pushday.html">
+          <div class="dag-nummer">DAG 1</div>
+          <div class="dag-naam">Push</div>
+          <div class="dag-uitleg">Borst, schouders, triceps</div>
+        </a>
+        <a class="dag-kaart" href="pullday.html">
+          <div class="dag-nummer">DAG 2</div>
+          <div class="dag-naam">Pull</div>
+          <div class="dag-uitleg">Rug, biceps</div>
+        </a>
+        <a class="dag-kaart" href="legsabs.html">
+          <div class="dag-nummer">DAG 3</div>
+          <div class="dag-naam">Legs &amp; Abs</div>
+          <div class="dag-uitleg">Benen, buik</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Onderbalk -->
+  <div class="footer">
+    Get Jacked
+  </div>
+
+</body>
 </html>
+
