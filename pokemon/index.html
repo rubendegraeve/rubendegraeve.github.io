@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemonkaarten</title>
+    <style>
+        * {
+            font-family: verdana;
+        }
+
+        .pokemonkaart {
+            width: 250px;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 15px;
+            float: left;
+        }
+
+        .achtergrond-geel {
+            background-color: #ffffc8;
+        }
+
+        .achtergrond-groen {
+            background-color: #c8ffc8;
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+        }
+
+        h4 {
+            color: gray;
+            text-align: center;
+        }
+
+        img {
+            width: 215px;
+        }
+
+        .type1 {
+            border-radius: 20px;
+            background-color: yellow;
+            text-align: center;
+            padding: 6px;
+            width: 140px;
+            margin: 10px auto;
+            font-weight: bold;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pokemonkaart achtergrond-geel">
+        <h1>Pikachu</h1>
+        <h4>#0025</h4>
+        <p><img src="025.png" alt="Pikachu"></p>
+        <p class="type1">Electric</p>
+        <p>35 HP - 90 speed</p>
+    </div>
+
+    <div class="pokemonkaart achtergrond-groen">
+        <h1>Bulbasaur</h1>
+        <h4>#0001</h4>
+        <p><img src="001.png" alt="Bulbasaur"></p>
+        <p class="type1">Grass</p>
+        <p>45 HP - 45 speed</p>
+    </div>
+
+</body>
+</html>
