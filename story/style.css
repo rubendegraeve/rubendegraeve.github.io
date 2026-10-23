@@ -19,3 +19,15 @@ body#background {
 #banner {
 	width: 100%;
 }
+
+.rechthoek {
+  width:300px;
+  height:20px;
+  border:1px solid black;
+  
+}
+
+.geel{
+    background-color: rgb(247,218,92);
+ 
+}
