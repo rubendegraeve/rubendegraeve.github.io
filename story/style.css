@@ -1,33 +1,74 @@
 
- {
+ * 
+{
 	font-family: verdana;
 }
-a:any-link {
+a:any-link 
+{
 	text-decoration-line: none;
 	color: black;
 }
-body {
+body 
+{
 	max-width: 980px;
 	margin-left: auto;
 	margin-right: auto;
 }
-body#background {
+body#background 
+{
 	background-image: url("img/001.png");
 	background-position: center;
 	background-repeat: no-repeat;
 }
-#banner {
+#banner 
+{
 	width: 100%;
 }
-
-.rechthoek {
-  width:300px;
-  height:20px;
-  border:1px solid black;
-  
+.bar 
+{
+	background-color: #F7DA5C;
 }
-
-.geel{
-    background-color: rgb(247,218,92);
- 
+p 
+{
+	text-indent: 50px;
+}
+.bar p 
+{
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	text-indent: 0px;
+}
+table 
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+th, td 
+{
+	border: 1px solid lightgrey;
+	padding: 10px;
+}
+.rechts 
+{
+	text-align: right;
+}
+.midden 
+{
+	text-align: center;
+}
+.pokemon 
+{
+	width: 40px;
+	height: 40px;
+}
+.type 
+{
+	width: 16px;
+	height: 16px;
+}
+.rechtsdrijven 
+{
+	float: right;
 }
